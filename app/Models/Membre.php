@@ -11,6 +11,6 @@ class Membre extends Model
 
     protected $fillable = [
         
-        'nombre','nom'
+        'nom'
     ];
 }

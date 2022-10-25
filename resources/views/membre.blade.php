@@ -39,7 +39,7 @@
     <div class="member-item">Lysimachos</div>
   </section>
     @foreach ($membres as $membre)
-    <p>{{ $membre->nombre  }}</p>
+    <p>{{$i++}}</p>
     <p>{{ $membre->nom }}</p>
     @endforeach
 

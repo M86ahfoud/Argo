@@ -16,6 +16,7 @@ class MembreController extends Controller
     {
         return view('membre', [
             'membres' => Membre::all(),
+            'i' => '1'
         ]);
     }
 
@@ -40,7 +41,7 @@ class MembreController extends Controller
         //Ajouter un nom d'une personne dans la BDD 
 
         $Membre = Membre::create([
-            'nombre' => request ('nombre'),
+            
             'nom' => request ('nom')
         ]);
 
