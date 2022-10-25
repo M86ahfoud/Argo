@@ -21,15 +21,11 @@
   
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
-  <form class="new-member-form">
-    <label for="name">Nom de l&apos;Argonaute</label>
-    <input id="name" name="name" type="text" placeholder="Charalampos" />
-    <button type="submit">Envoyer</button>
-  </form>
+ 
 
 
 
-  <form action="" method="POST" enctype="multipart/form-data">
+  <form action="" method="POST" enctype="multipart/form-data" class="new-member-form">
   @csrf
   <label for="nombre">Nombre</label>
   <input type="number" name="nombre" id="nombre" >
