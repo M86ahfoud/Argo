@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> 
     <link  href="{{asset('css/app.css') }}" rel="stylesheet">
-</head>
     <title>Document</title>
 </head>
 <body>
@@ -21,28 +23,47 @@
   
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
-  <form action="" method="POST" enctype="multipart/form-data" class="new-member-form">
+  
+  <form class="row container text-center" action="" method="POST" enctype="multipart/form-data" >
   @csrf
-  <label for="nombre">Nombre</label>
-  <input type="number" name="nombre" id="nombre" >
-  <label for="nom">Nom de l&apos;Argonaute</label>
-  <input id="nom" name="nom" type="text" placeholder="Charalampos" />
-    <button type="submit">Envoyer</button>
+  <label for="nom" >Nom de l&apos;Argonaute</label>
+  <div class="row justify-content-center">
+
+    <div class="col-auto ">
+      <input id="nom" class="form-control" name="nom" type="text" placeholder="Charalampos" />
+    </div >
+    <div class="col-auto ">
+      <button type="submit" class="btn btn-primary mb-3">Envoyer</button>
+    </div>
+
+  </div>
   </form>
 
 
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
   <section class="member-list">
-    <div class="member-item">Eleftheria</div>
-    <div class="member-item">Gennadios</div>
-    <div class="member-item">Lysimachos</div>
+    <table class=" table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Numéro</th>
+                            <th scope="col" >Nom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach ($membres as $membre)
+                            <tr>
+                                <th scope="row">{{ $i++ }}</th>
+                                
+                                <td>{{ $membre->nom }}</td>
+                            </tr>
+                    @endforeach
+  
+                    </tbody>
+    </table>
+    
   </section>
-    @foreach ($membres as $membre)
-    <p>{{$i++}}</p>
-    <p>{{ $membre->nom }}</p>
-    @endforeach
-
+   
 </main>
 
 <footer>

@@ -10,6 +10,10 @@ main {
   margin: 0 auto;
 }
 
+.member-list {
+
+  width: 25%;
+}
 header {
   background: #f4f4f4;
   text-align: center;
