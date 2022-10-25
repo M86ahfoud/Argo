@@ -42,7 +42,7 @@
 
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
-  <section class="member-list">
+  <section class="member-list container text-center">
     <table class=" table">
                     <thead>
                         <tr>
