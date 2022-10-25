@@ -21,9 +21,6 @@
   
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
- 
-
-
 
   <form action="" method="POST" enctype="multipart/form-data" class="new-member-form">
   @csrf
